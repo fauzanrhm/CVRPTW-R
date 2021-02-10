@@ -1,12 +1,29 @@
 # Capacitated Vehicle Routing Problem with Time Windows (CVTPTW) calculated with Genetic Algorithm (GA) and visualise in Indonesia Interactive Maps (ggplots &amp; ggiraph)
 
+This is the following library that need to be run in R Console.
+install.packages(“tidyverse”)
+install.packages(“ggrepel”)
+install.packages(“GA”)
+install.packages(“doParallel”)
+install.packages(“tictoc”)
+install.packages(“readxl”)
+install.packages(“writexl”)
+install.packages(“indonesia”)
+install.packages(“ggiraph”)
+
+The doParallel package is used to speed up the program running process, doParallel will run the program in parallel. doParallel is required for large scale route determination.
+
 ![alt text](https://user-images.githubusercontent.com/78789134/107484343-debac700-6bb4-11eb-99b1-4763bb52db49.JPG)
+
+Preface :
 
 Distribution is an activity to transfer goods from the supplier to the agent in a supply chain. Distribution is key to the profits that the company will earn because the distribution will directly affect the cost of the supply chain and the needs of the agent. The right distribution network can be used to achieve a wide range of objectives from supply chains, ranging from low cost to high response to agent demand 
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/78789134/107484038-72d85e80-6bb4-11eb-95ee-e6609cf726e0.JPG" />
 </p>
+
+Overview :
 
 Planning the distribution process which is important so that companies can deliver products to consumers on time, in the right place, and good condition. The distribution of products from source to several destinations is certainly a fairly complex problem because the existence of several places of destination for product delivery will cause several distribution lines that are longer travel times. Poor distribution system planning will lead to wasteful transportation costs.
 
@@ -37,3 +54,7 @@ To ensure that the program can run properly. Error Checker will be added to the 
 Benchmarking program aims to determine how efficiently the program performs computation by comparing the time it takes for the program to get the final result. Benchmarking is done with 100 iteration parameters, 1000 iterations, 10000 iterations on the Genetic Algorithm with a total population of N = 100 populations. Each experiment was used by using a laptop with an Intel i7 7th Generation processor with a CPU Load of 10%-30%.
 
 ![alt text](https://user-images.githubusercontent.com/78789134/107481874-77e7de80-6bb1-11eb-81e6-12efad1db31f.JPG)
+
+This program has the capability for unlimited vehicles. ggplots are required to be scaled for easy viewing
+
+![alt text](https://user-images.githubusercontent.com/78789134/107485469-6228e800-6bb6-11eb-8994-d1b3d5837dfb.JPG)
