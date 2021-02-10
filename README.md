@@ -2,13 +2,21 @@
 
 This is the following library that need to be run in R Console.
 install.packages(“tidyverse”)
+
 install.packages(“ggrepel”)
+
 install.packages(“GA”)
+
 install.packages(“doParallel”)
+
 install.packages(“tictoc”)
+
 install.packages(“readxl”)
+
 install.packages(“writexl”)
+
 install.packages(“indonesia”)
+
 install.packages(“ggiraph”)
 
 The doParallel package is used to speed up the program running process, doParallel will run the program in parallel. doParallel is required for large scale route determination.
