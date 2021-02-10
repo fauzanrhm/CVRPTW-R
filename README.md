@@ -24,7 +24,9 @@ Algorithm development carried out is the development of the Nearest Neighbor alg
 
 The route can be output in Excel form and to plot the results of the proposed distribution routes with Geographical Information System (GIS), ggplot2 and ggirpaph are used to visualize the distribution route data
 
-![alt text](https://user-images.githubusercontent.com/78789134/107483097-26405380-6bb3-11eb-8501-6796125f6060.JPG)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/107483097-26405380-6bb3-11eb-8501-6796125f6060.JPG" />
+</p>
 
 To ensure that the program can run properly. Error Checker will be added to the script genetic_algortihm_fitness.R, the program will detect if there is a negative value or zero value from input parameters. The program will 'stop' if there is a negative value on the input demand, service time. For capacity, vehicle speed, fuel ratio, fuel price and working hour and loading time, the program will 'stop' if there is a negative or zero (0) value
 
