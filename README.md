@@ -76,12 +76,12 @@ This program has the capability for unlimited vehicles. ggplots are required to 
 plot_gis <- ggplot(indonesia_kota) + geom_sf() + 
     coord_sf(xlim = c(99.8, 100.6), ylim = c(-0.82, -0.22))+  geom_sf_label(aes(label = nama_kota), 
     label.padding = unit(1, "mm"))+ geom_point(data = route1, aes(longitude,latitude), show.legend = F) +
-    geom_segment(data = data_gis, aes(x = from_lon, xend = to_lon, y = from_lat, yend = to_lat, color = unit), 
-                 size = 0.5, alpha = 0.7, arrow = arrow(type = "closed", angle = 30, length = unit(3, "mm")) ) +
-    geom_point(data = route1[1,], aes(longitude,latitude), color = "red", size = 3) +
-    geom_label_repel(data = route1, aes(longitude,latitude, label = code), size =2.5, alpha = 0.7, segment.size = 0.2) +
-    scale_color_manual(values = c("firebrick", "orange", "dodgerblue", "green3","purple","cyan"))+
-    theme_minimal() +
+    geom_segment(data = data_gis, aes(x = from_lon, xend = to_lon, y = from_lat, 
+    yend = to_lat, color = unit),  size = 0.5, alpha = 0.7, arrow = arrow(type = "closed", angle = 30, 
+    length = unit(3, "mm")) ) +geom_point(data = route1[1,], aes(longitude,latitude), color = "red", size = 3) +
+    geom_label_repel(data = route1, aes(longitude,latitude, label = code), size =2.5, alpha = 0.7, 
+    segment.size = 0.2) +scale_color_manual(values = c("firebrick", "orange", "dodgerblue", 
+    "green3","purple","cyan"))+ theme_minimal() +
     theme(panel.grid = element_blank()) +
     theme(legend.position = "top") +
     theme(plot.title=element_text(hjust=0.5, face="bold"))+
