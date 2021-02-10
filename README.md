@@ -68,6 +68,12 @@ The route can be output in Excel form and to plot the results of the proposed di
   <img src="https://user-images.githubusercontent.com/78789134/107483097-26405380-6bb3-11eb-8501-6796125f6060.JPG" />
 </p>
 
+This program has the capability for unlimited vehicles. ggplots are required to be scaled for easy viewing
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/107485469-6228e800-6bb6-11eb-8994-d1b3d5837dfb.JPG" />
+</p>
+
 To ensure that the program can run properly. Error Checker will be added to the script genetic_algortihm_fitness.R, the program will detect if there is a negative value or zero value from input parameters. The program will 'stop' if there is a negative value on the input demand, service time. For capacity, vehicle speed, fuel ratio, fuel price and working hour and loading time, the program will 'stop' if there is a negative or zero (0) value
 
 <p align="center">
@@ -77,10 +83,4 @@ To ensure that the program can run properly. Error Checker will be added to the 
 Benchmarking program aims to determine how efficiently the program performs computation by comparing the time it takes for the program to get the final result. Benchmarking is done with 100 iteration parameters, 1000 iterations, 10000 iterations on the Genetic Algorithm with a total population of N = 100 populations. Each experiment was used by using a laptop with an Intel i7 7th Generation processor with a CPU Load of 10%-30%.
 
 ![alt text](https://user-images.githubusercontent.com/78789134/107481874-77e7de80-6bb1-11eb-81e6-12efad1db31f.JPG)
-
-This program has the capability for unlimited vehicles. ggplots are required to be scaled for easy viewing
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/107485469-6228e800-6bb6-11eb-8994-d1b3d5837dfb.JPG" />
-</p>
 
