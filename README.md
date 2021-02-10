@@ -41,9 +41,26 @@ It is necessary to design a more optimal distribution route by considering the s
 
 Algorithm development carried out is the development of the Nearest Neighbor algorithm as population initialization and genetic algorithms for data processing. With the theory of evolution and genetic theory, the application of the Genetic Algorithm will involve several operators: Evolution operators are involved a selection process in it, Genetic Operators is involved in crossover and mutation operators. To check the optimization results, a fitness function is needed, which signifies an overview of the results or solutions that have been coded. During walking, the parent must be used for reproduction, crossing over, and mutation to create offspring. If the Genetic Algorithm is designed correctly, the population will converge and an optimal solution will be obtained
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/107481881-79b1a200-6bb1-11eb-9f80-0a4618366f28.png" />
-</p>
+```
+#Generate Route Using Genetic Algorithm
+source("script/genetic_algorithm_fitness.R")
+Capacity	<- 24
+speed       	<- 45
+fuel_ratio	<- 5
+fuel_price	<- 5150
+work_hour	<- 8
+Loading_time <- 0.5
+#Genetic Algorithm Parameter & Method
+genetic_algorithm_route <- ga( type = "permutation", fitness = fitness_distance, 
+                               capacity = capacity, demand = route$demand, 
+                               work_hour = work_hour, speed = speed, loading_time = 
+                               loading_time distance = distance_matrix,  
+                               service_time =route$service_time, lower = 2, 
+                               upper = max(route$node), selection = gaperm_rwSelection,  m
+                               utation = gaperm_swMutation, popSize = 20, pcrossover = 0.8, 
+                               pmutation = 0.1, maxiter = 1000, suggestions = suggestion_route,
+                               monitor = F, seed = 123, parallel=TRUE)
+```
 
 The route can be output in Excel form and to plot the results of the proposed distribution routes with Geographical Information System (GIS), ggplot2 and ggirpaph are used to visualize the distribution route data
 
