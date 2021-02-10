@@ -1,6 +1,6 @@
 # Capacitated Vehicle Routing Problem with Time Windows (CVTPTW) calculated with Genetic Algorithm (GA) and visualise in Indonesia Interactive Maps (ggplots &amp; ggiraph)
 
-![alt text](https://img.shields.io/badge/Language-R-brightgreen)
+![alt text](https://img.shields.io/badge/Language-R-brightgreen) ![alt text](https://img.shields.io/badge/Author-Fauzan%20Rahman-blue)
 
 ## Package
 ```
@@ -14,9 +14,8 @@ install.packages(“readxl”)
 install.packages(“writexl”)
 install.packages(“indonesia”)
 install.packages(“ggiraph”)
+"The doParallel package is used to speed up the program running process, doParallel will run the program in parallel. doParallel is required for large scale route" determination.
 ```
-
-The doParallel package is used to speed up the program running process, doParallel will run the program in parallel. doParallel is required for large scale route determination.
 
 Program Overview 
 
