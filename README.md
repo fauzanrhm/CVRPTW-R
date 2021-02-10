@@ -72,6 +72,28 @@ The route can be output in Excel form and to plot the results of the proposed di
 
 This program has the capability for unlimited vehicles. ggplots are required to be scaled for easy viewing
 
+```
+plot_gis <- ggplot(indonesia_kota) + geom_sf() + 
+    coord_sf(xlim = c(99.8, 100.6), ylim = c(-0.82, -0.22))+  geom_sf_label(aes(label = nama_kota), label.padding = unit(1, "mm"))+ geom_point(data = route1, aes(longitude,latitude), show.legend = F) +
+    geom_segment(data = data_gis, aes(x = from_lon, xend = to_lon, y = from_lat, yend = to_lat, color = unit), 
+                 size = 0.5, alpha = 0.7, arrow = arrow(type = "closed", angle = 30, length = unit(3, "mm")) ) +
+    geom_point(data = route1[1,], aes(longitude,latitude), color = "red", size = 3) +
+    geom_label_repel(data = route1, aes(longitude,latitude, label = code), size =2.5, alpha = 0.7, segment.size = 0.2) +
+    scale_color_manual(values = c("firebrick", "orange", "dodgerblue", "green3","purple","cyan"))+
+    theme_minimal() +
+    theme(panel.grid = element_blank()) +
+    theme(legend.position = "top") +
+    theme(plot.title=element_text(hjust=0.5, face="bold"))+
+    labs(x = quote(Longitude),
+         y = quote(Latitude),
+         title = "Proposed Distribution Route on CV. Abro Mandiri",
+         subtitle = "Capacity = 24 CBM | Method = Genetic Algorithm  | Date = 6 July 2020 ",
+         color = "Driver")
+gis <- girafe (ggobj= plot_gis)
+gis <- girafe_options(gis, opts_zoom(min =.3 , max=10))
+if (interactive()) print(gis)
+```
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/78789134/107485469-6228e800-6bb6-11eb-8994-d1b3d5837dfb.JPG" />
 </p>
