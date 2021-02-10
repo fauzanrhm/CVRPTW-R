@@ -14,7 +14,7 @@ install.packages(“readxl”)
 install.packages(“writexl”)
 install.packages(“indonesia”)
 install.packages(“ggiraph”)
-"The doParallel package is used to speed up the program running process, doParallel will run the program in parallel. doParallel is required for large scale route" determination.
+Note : doParallel is only required for large scale route determination.
 ```
 
 Program Overview 
