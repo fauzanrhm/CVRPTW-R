@@ -1,7 +1,10 @@
 ---
 title: "CVRPTW-R"
+description : "Capacitated Vehicle Routing Problem with Time Windows (CVRPTW) with GA and Interactive Maps (ggplots & ggiraph)"
+note : "Please not use this program for commercial use without owner permission"
 author: "Fauzan Rahman"
 date : "5 November 2020"
+license : "Apache License 2.0"
 output: html_document
 ---
 
@@ -84,7 +87,7 @@ int_route$Longitude.km <- Longitude.km
 route <- select (int_route,c(node,demand,service_time,Latitude.km,Longitude.km))
 route <- route[,c(1,4,5,2,3)]
 
-# 5 | CalcuLatitudee distance matrix 
+# 5 | Calculate Latittude distance matrix 
 distance_matrix  <- dist(route[ , 2:3], upper = T, diag = T) %>% as.matrix()
 
 # GENERATE INITIAL POPULATION FOR GENETIC ALGORITHM (DEFAULT = RANDOM)
@@ -108,11 +111,11 @@ source("script/genetic_algorithm_fitness.R")
 capacity 	  <- 24
 #Average Vehicle Speed
 speed       <- 45
-#Mitsubishi Canter 136 PS Fuel Ratio = 1 : 5 km
+#Example : Mitsubishi Canter 136 PS Fuel Ratio = 1 : 5 km
 fuel_ratio  <- 5
 #Bio Solar Price = Rp. 5150 
 fuel_price  <- 5150
-#Work Hours (08:00-17:00, Effective : 8 Hours, Break : 1 Hours)
+#Example Work Hours (08:00-17:00, Effective : 8 Hours, Break : 1 Hours)
 work_hour   <- 8
 #Loading Time (30 minute/ 0.5 hour)
 loading_time <- 0.5
@@ -128,24 +131,24 @@ genetic_algorithm_route		<- ga(
 		capacity = capacity, 
 		demand = route$demand, 
 		distance = distance_matrix, 
-        loading_time=loading_time,
+        	loading_time=loading_time,
 		service_time =route$service_time, 
-        work_hour = work_hour,
-        speed = speed,
+        	work_hour = work_hour,
+        	speed = speed,
 		lower = 2, 
 		upper = max(route$node), 
 		selection = gaperm_rwSelection,
 		crossover = gaperm_oxCrossover, 
-        mutation = gaperm_swMutation, 
-        #input population size
+        	mutation = gaperm_swMutation, 
+        	#input population size
 		popSize = 100, 
-        #input probability of crossover
+        	#input probability of crossover
 		pcrossover = 0.8,
-        #input probability of mutation 
+        	#input probability of mutation 
 		pmutation = 0.1, 
-        #input total iteration
+        	#input total iteration
 		maxiter = 100, 
-        suggestions = NNA_suggestion_route, 
+        	suggestions = NNA_suggestion_route, 
 		monitor = F, seed = 123, parallel =TRUE)
 
 # 4 | Genetic Algorithm Result
@@ -212,12 +215,14 @@ data_gis1 <- rename(data_gis1, "Service Time (Hour)" = service_time)
 data_gis1 <- rename(data_gis1, "Demand (CBM)" = demand)
 
 # 3 | Plot Data to the Map, ggplot, gis location is used by library(indonesia)
+# Current Maps is West Sumatera Indonesia
 indonesia_kota <- id_map("indonesia", "kota")
 indonesia_kota <- indonesia_kota[381:399,]
 plot_gis <- ggplot(indonesia_kota) + geom_sf() + 
-    coord_sf(xlim = c(99.8, 100.6), ylim = c(-0.82, -0.22))+  geom_sf_label(aes(label = nama_kota), label.padding = unit(1, "mm"))+ geom_point(data = route1, aes(longitude,latitude), show.legend = F) +
+    coord_sf(xlim = c(99.8, 100.6), ylim = c(-0.82, -0.22))+  geom_sf_label(aes(label = nama_kota), label.padding = unit(1, "mm"))+ geom_point(data = route1, 		
+    aes(longitude,latitude), show.legend = F) +
     geom_segment(data = data_gis, aes(x = from_lon, xend = to_lon, y = from_lat, yend = to_lat, color = unit), 
-                 size = 0.5, alpha = 0.7, arrow = arrow(type = "closed", angle = 30, length = unit(3, "mm")) ) +
+    size = 0.5, alpha = 0.7, arrow = arrow(type = "closed", angle = 30, length = unit(3, "mm")) ) +
     geom_point(data = route1[1,], aes(longitude,latitude), color = "red", size = 3) +
     geom_label_repel(data = route1, aes(longitude,latitude, label = code), size =2.5, alpha = 0.7, segment.size = 0.2) +
     scale_color_manual(values = c("firebrick", "orange", "dodgerblue", "green3","purple","cyan"))+
@@ -227,8 +232,8 @@ plot_gis <- ggplot(indonesia_kota) + geom_sf() +
     theme(plot.title=element_text(hjust=0.5, face="bold"))+
     labs(x = quote(Longitude),
          y = quote(Latitude),
-         title = "Proposed Distribution Route on CV. Abro Mandiri",
-         subtitle = "Capacity = 24 CBM | Method = Genetic Algorithm  | Date = 6 July 2020 ",
+         title = "Proposed Distribution Route",
+         subtitle = "Capacity = 24 CBM | Method = Genetic Algorithm  | Date = Choose Date ",
          color = "Driver")
 gis <- girafe (ggobj= plot_gis)
 gis <- girafe_options(gis, opts_zoom(min =.3 , max=10))
