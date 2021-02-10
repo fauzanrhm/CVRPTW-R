@@ -1,5 +1,6 @@
 # Capacitated Vehicle Routing Problem with Time Windows (CVTPTW) calculated with Genetic Algorithm (GA) and visualise in Indonesia Interactive Maps (ggplots &amp; ggiraph)
 
+```
 This is the following library that need to be run in R Console.
 install.packages(“tidyverse”)
 install.packages(“ggrepel”)
@@ -10,6 +11,7 @@ install.packages(“readxl”)
 install.packages(“writexl”)
 install.packages(“indonesia”)
 install.packages(“ggiraph”)
+```
 
 The doParallel package is used to speed up the program running process, doParallel will run the program in parallel. doParallel is required for large scale route determination.
 
@@ -59,4 +61,7 @@ Benchmarking program aims to determine how efficiently the program performs comp
 
 This program has the capability for unlimited vehicles. ggplots are required to be scaled for easy viewing
 
-![alt text](https://user-images.githubusercontent.com/78789134/107485469-6228e800-6bb6-11eb-8994-d1b3d5837dfb.JPG)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/107485469-6228e800-6bb6-11eb-8994-d1b3d5837dfb.JPG" />
+</p>
+
