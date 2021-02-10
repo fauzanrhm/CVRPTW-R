@@ -87,7 +87,7 @@ plot_gis <- ggplot(indonesia_kota) + geom_sf() +
     theme(plot.title=element_text(hjust=0.5, face="bold"))+
     labs(x = quote(Longitude),
          y = quote(Latitude),
-         title = "Proposed Distribution Route on XYZ Company",
+         title = "Proposed Distribution Route",
          subtitle = "Capacity = 24 CBM | Method = Genetic Algorithm  | Date = Choose Date ",
          color = "Driver")
 gis <- girafe (ggobj= plot_gis)
