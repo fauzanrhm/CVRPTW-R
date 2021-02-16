@@ -123,3 +123,4 @@ Benchmarking program aims to determine how efficiently the program performs comp
 
 ![alt text](https://user-images.githubusercontent.com/78789134/107481874-77e7de80-6bb1-11eb-81e6-12efad1db31f.JPG)
 
+However, by using population initialization using the Nearest Neighbor Algorithm, 1000 iterations may be enough so that it only takes an average of 263.82 seconds to get the desired result. So, with this result, it is hoped that this program can be used to solve more significant problems and will not take much time to solve them.
