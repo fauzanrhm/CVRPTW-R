@@ -63,7 +63,18 @@ genetic_algorithm_route <- ga( type = "permutation", fitness = fitness_distance,
                                pmutation = 0.1, maxiter = 1000, suggestions = suggestion_route,
                                monitor = F, seed = 123, parallel=TRUE)
 ```
+### Time Series Generation of Genetic Algorithm
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/108051899-0363e280-707e-11eb-91cc-32046f59a6c3.png" />
+</p>
+
 ## Output
+
+### Genetic Algorithm Output for Route Distribution
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/108051800-e62f1400-707d-11eb-8e5f-b856e7383676.png" />
+</p>
+
 The route can be output in Excel form and to plot the results of the proposed distribution routes with Geographical Information System (GIS), ggplot2 and ggirpaph are used to visualize the distribution route data
 
 <p align="center">
