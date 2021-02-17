@@ -36,8 +36,51 @@ Planning the distribution process is important because with planning, companies 
 It is necessary to design a more optimal distribution route by considering the shortest distance, maximum capacity of the vehicle, and the working hours of the driver to  minimize the total distribution time and save the company expenses. In addition, lateness in the delivery of products is feared to decrease customer satisfaction. With the design of distribution routes, it is expected that products can be distributed to customers more quickly and optimally.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/107481887-7ae2cf00-6bb1-11eb-9b8a-3694cfbc7ac7.png" />
+  <img src="https://user-images.githubusercontent.com/78789134/108167939-0cf65480-7129-11eb-8ee2-2dd7a0c58ca0.JPG" />
 </p>
+
+
+## DATA FOR MANUAL CALCULATION AND PROGRAM DEVELOPMENT
+
+For algorithm & program development, a simple simulation is compiled to verify whether the program is working or not. The simulation will be carried out with the Nearest Neighbor algorithm as the initial population and the Genetic algorithm to determine the proposed shortest distribution route
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/108168200-74ac9f80-7129-11eb-9613-a5df0c1d2c88.JPG" />
+</p>
+
+## DETERMINING THE DISTANCE MATRIX –DMS FORMAT BASED ON ISO 6709:2008 
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/108168558-1502c400-712a-11eb-93d0-85630682c8e2.JPG" />
+</p>
+
+### Latitude in DMS Format based on ISO 6709:2008
+
+The first two digits of the latitude string must represent degrees. Subsequent Digits must be minutes, seconds or decimals according to the following principle in which the decimal point (the point or the comma) represents the change from the sexagesimal system to the decimal system (ISO 6709:2008):
+Degrees, minutes, seconds and decimal seconds: DDMMSS.SS
+
+### Longitude in DMS Format based on ISO 6709:2008
+
+The first three digits of the longitude string must represent degrees. Subsequent digits must represent minutes, seconds or decimal fractions according to the following principle Degrees, minutes, seconds and decimal seconds: DDDMMSS.SS
+
+## DETERMINING THE DISTANCE MATRIX
+
+### Convert Latitude & Longitude to Degree Minutes Second
+```
+Degree 	= trunc (Ddec, 0)
+M 		= trunc(60x |Ddec-D|, 0)
+S		= 3600 x |Ddec-D| - 60 x M
+```
+
+### Convert DMS to Latitude & Longitude in Km
+```
+Formula of Latitude km=(Degree x37)+(Minutesx1.84)+ (Seconds x 0.030702)
+Formula of Longitude km=(Degree x 110.32)+(Minutesx1.86)+ (Secondsx0.03092)
+```
+### Calculate Distance Matrix using Euclidean Distance
+```
+Distance (dij)    ="    √(├ (𝑋┤_1−𝑋_2 )^2+├ (𝑌┤_1−𝑌_2 )^2 )
+```
 
 ## Genetic Algorithm
 
