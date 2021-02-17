@@ -9,16 +9,12 @@ Program Overview
 ## Preface 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/107484038-72d85e80-6bb4-11eb-95ee-e6609cf726e0.JPG" />
+  <img src="https://user-images.githubusercontent.com/78789134/108178803-71201500-7137-11eb-8950-d4a6bde09cda.jpg" />
 </p>
 
 Distribution is an activity to transfer goods from the supplier to the agent in a supply chain. Distribution is key to the profits that the company will earn because the distribution will directly affect the cost of the supply chain and the needs of the agent. The right distribution network can be used to achieve a wide range of objectives from supply chains, ranging from low cost to high response to agent demand 
 
 ## Overview 
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/108167939-0cf65480-7129-11eb-8ee2-2dd7a0c58ca0.JPG" />
-</p>
 
 Planning the distribution process is important because with planning, companies can deliver products to consumers on time, in the right place, and good condition. The distribution of products from source to several destinations is certainly a fairly complex problem because the existence of several places of destination for product delivery will cause several distribution lines that are longer travel times. Poor distribution system planning will lead to wasteful transportation costs.
 
@@ -295,6 +291,11 @@ if (interactive()) print(gis)
 ## Additional Features
 
 ### Capability for Large Scale Route Determination 
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/108178806-72514200-7137-11eb-937e-b4430bf14d54.jpg" />
+</p>
+
 This program has the capability for unlimited vehicles. ggplots are required to be scaled for easy viewing
 
 ```
@@ -320,21 +321,19 @@ gis <- girafe_options(gis, opts_zoom(min =.3 , max=10))
 if (interactive()) print(gis)
 ```
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/107485469-6228e800-6bb6-11eb-8994-d1b3d5837dfb.JPG" />
-</p>
-
 ### Data Verification 
 
 To ensure that the program can run properly. Error Checker will be added to the script genetic_algortihm_fitness.R, the program will detect if there is a negative value or zero value from input parameters. The program will 'stop' if there is a negative value on the input demand, service time. For capacity, vehicle speed, fuel ratio, fuel price and working hour and loading time, the program will 'stop' if there is a negative or zero (0) value
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/108177006-3fa64a00-7135-11eb-8fda-afbc49f4de3e.jpg" />
+  <img src="https://user-images.githubusercontent.com/78789134/108178797-6f565180-7137-11eb-8761-340fb6d97d24.jpg" />
 </p>
 
 ### Benchmark Result
 Benchmarking program aims to determine how efficiently the program performs computation by comparing the time it takes for the program to get the final result. Benchmarking is done with 100 iteration parameters, 1000 iterations, 10000 iterations on the Genetic Algorithm with a total population of N = 100 populations. Each experiment was used by using a laptop with an Intel i7 7th Generation processor with a CPU Load of 10%-30%.
 
-![alt text](https://user-images.githubusercontent.com/78789134/107481874-77e7de80-6bb1-11eb-81e6-12efad1db31f.JPG)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/108178797-6f565180-7137-11eb-8761-340fb6d97d24.jpg" />
+</p>
 
 However, by using population initialization using the Nearest Neighbor Algorithm, 1000 iterations may be enough so that it only takes an average of 263.82 seconds to get the desired result. So, with this result, it is hoped that this program can be used to solve more significant problems and will not take much time to solve them.
