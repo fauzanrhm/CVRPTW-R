@@ -7,7 +7,7 @@
 ![alt text](https://user-images.githubusercontent.com/78789134/108180087-efc98200-7138-11eb-92df-dcaadf1aef37.jpg)
 
 ## Hello from Author
-Hi, this program is part of my final project on http://scholar.unand.ac.id/65572, to make this program requires a lot of time, effort and my student money. This program is free for academic purposes, please contact me if you want to use program for commercial use.
+Hi, this program is part of my final project on http://scholar.unand.ac.id/65572, to make this program requires a lot of time, effort. This program is free for academic purposes, please contact me if you want to use program for commercial use.
 
 ## Preface 
 
