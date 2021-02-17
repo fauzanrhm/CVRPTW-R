@@ -4,7 +4,7 @@
 
 Program Overview 
 
-![alt text](https://user-images.githubusercontent.com/78789134/107484343-debac700-6bb4-11eb-99b1-4763bb52db49.JPG)
+![alt text](https://user-images.githubusercontent.com/78789134/108180087-efc98200-7138-11eb-92df-dcaadf1aef37.jpg)
 
 ## Preface 
 
