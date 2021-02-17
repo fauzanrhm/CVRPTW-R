@@ -87,6 +87,7 @@ int_route <- as.data.frame(int_route)
 Convert Longitude and Latitude to Distance in Kilometres Using this code
 
 ```
+# 1 | Add dummy for calculation 
 degree_dummy <- int_route[,7]
 degree <- as.integer(degree_dummy)
 minutes_dummy <- 60*(degree_dummy - degree)
@@ -98,7 +99,8 @@ degree.Latitude <- degree
 minutes.Latitude <- minutes
 seconds.Latitude <- seconds
 # 2 | Convert to km
-Latitude.km <- -((degree.Latitude * 110.57) + (minutes.Latitude *1.84) + (seconds.Latitude * 0.03072))# 3 | Convert to DMS Longitude
+Latitude.km <- -((degree.Latitude * 110.57) + (minutes.Latitude *1.84) + (seconds.Latitude * 0.03072))
+# 3 | Convert to DMS Longitude
 degree_dummy1 <- int_route [,8]
 degree1 <- as.integer(degree_dummy1)
 minutes_dummy1 <- 60*(degree_dummy1 - degree1)
@@ -108,7 +110,8 @@ seconds_dummy1 <- 60*(minutes_dummy1 - minutes1)
 seconds1       <- round(seconds_dummy1, digits=3 )
 degree.Longitude <- degree1
 minutes.Longitude <- minutes1
-seconds.Longitude <- seconds1# 4 | Convert to km
+seconds.Longitude <- seconds1 
+Convert to km
 Longitude.km <(degree.Longitude * 111.32) + (minutes.Longitude*1.86) + (seconds.Longitude * 0.03092)
 int_route$Latitude.km <- Latitude.km
 int_route$Longitude.km <- Longitude.km
