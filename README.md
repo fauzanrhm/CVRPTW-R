@@ -8,21 +8,21 @@ Program Overview
 
 ## Preface 
 
-Distribution is an activity to transfer goods from the supplier to the agent in a supply chain. Distribution is key to the profits that the company will earn because the distribution will directly affect the cost of the supply chain and the needs of the agent. The right distribution network can be used to achieve a wide range of objectives from supply chains, ranging from low cost to high response to agent demand 
-
 <p align="center">
   <img src="https://user-images.githubusercontent.com/78789134/107484038-72d85e80-6bb4-11eb-95ee-e6609cf726e0.JPG" />
 </p>
 
+Distribution is an activity to transfer goods from the supplier to the agent in a supply chain. Distribution is key to the profits that the company will earn because the distribution will directly affect the cost of the supply chain and the needs of the agent. The right distribution network can be used to achieve a wide range of objectives from supply chains, ranging from low cost to high response to agent demand 
+
 ## Overview 
-
-Planning the distribution process is important because with planning, companies can deliver products to consumers on time, in the right place, and good condition. The distribution of products from source to several destinations is certainly a fairly complex problem because the existence of several places of destination for product delivery will cause several distribution lines that are longer travel times. Poor distribution system planning will lead to wasteful transportation costs.
-
-It is necessary to design a more optimal distribution route by considering the shortest distance, maximum capacity of the vehicle, and the working hours of the driver to  minimize the total distribution time and save the company expenses. In addition, lateness in the delivery of products is feared to decrease customer satisfaction. With the design of distribution routes, it is expected that products can be distributed to customers more quickly and optimally.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/78789134/108167939-0cf65480-7129-11eb-8ee2-2dd7a0c58ca0.JPG" />
 </p>
+
+Planning the distribution process is important because with planning, companies can deliver products to consumers on time, in the right place, and good condition. The distribution of products from source to several destinations is certainly a fairly complex problem because the existence of several places of destination for product delivery will cause several distribution lines that are longer travel times. Poor distribution system planning will lead to wasteful transportation costs.
+
+It is necessary to design a more optimal distribution route by considering the shortest distance, maximum capacity of the vehicle, and the working hours of the driver to  minimize the total distribution time and save the company expenses. In addition, lateness in the delivery of products is feared to decrease customer satisfaction. With the design of distribution routes, it is expected that products can be distributed to customers more quickly and optimally.
 
 ## R Program – Library & Setup
 
@@ -51,6 +51,10 @@ int_route <- read_xls("data_input/program_verification.xls", sheet=1)
 int_route <- as.data.frame(int_route)
 ```
 ### R Program – Convert to Latitude & Longitude In km based on ISO 6709:2008
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/108169715-a6266a80-712b-11eb-9947-0a00f6192667.png" />
+</p>
 
 Convert Longitude and Latitude to Distance in Kilometres Using this code
 
@@ -82,22 +86,25 @@ int_route$Latitude.km <- Latitude.km
 int_route$Longitude.km <- Longitude.km
 
 ```
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/108169715-a6266a80-712b-11eb-9947-0a00f6192667.png" />
-</p>
 
 ### R Program -Calculating Distance Matrix
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/108169887-e7b71580-712b-11eb-9654-261e8197cfcb.png" />
+</p>
+
 ```
 route <- select (int_route,c(node,demand,service_time,Latitude.km,Longitude.km))
 route <- route[,c(1,4,5,2,3)]
 # 5 | CalcuLatitudee distance matrix 
 distance_matrix  <- dist(route[ , 2:3], upper = T, diag = T) %>% as.matrix()
 ```
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/108169887-e7b71580-712b-11eb-9654-261e8197cfcb.png" />
-</p>
 
 ### R Program - Creating An Initial Population With The Nearest Neighbor Algorithm
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/108170064-2f3da180-712c-11eb-8ee8-f9bf7e80c01e.png" />
+</p>
+
 ```
 # GENERATE INITIAL POPULATION FOR GENETIC ALGORITHM 
 # (DEFAULT = RANDOM)
@@ -111,9 +118,6 @@ NNA_suggestion_route <- matrix(ncol = (max(route$node)-1), nrow = 20)
     NNA_suggestion_route[i, ] <- find_route$route[2:max(route$node)] %>% as.numeric()
   }
 ```
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/108170064-2f3da180-712c-11eb-8ee8-f9bf7e80c01e.png" />
-</p>
 
 ### R Program – Calculating Genetic Algorithm
 
@@ -168,11 +172,11 @@ plot(genetic_algorithm_route)
 ```
 ### R Program – Genetic Algorithm Result
 
-The results of the genetic algorithm with the solution of  genes and the total distance in the form of a fitness function value, (-) in fitness function value minimize the function and the value is cumulative distance that has been calculated with genetic algorithm (-18.08)
-
 <p align="center">
   <img src="https://user-images.githubusercontent.com/78789134/108170322-9a877380-712c-11eb-9e53-525bb8dde7b3.png" />
 </p>
+
+The results of the genetic algorithm with the solution of  genes and the total distance in the form of a fitness function value, (-) in fitness function value minimize the function and the value is cumulative distance that has been calculated with genetic algorithm (-18.08)
 
 ### Time Series Generation of Genetic Algorithm
 <p align="center">
@@ -180,6 +184,10 @@ The results of the genetic algorithm with the solution of  genes and the total d
 </p>
 
 ## R Program – Convert Genetic Algoritm To Proposed Route Result
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/108170799-2f8a6c80-712d-11eb-9165-cce4f5ca6f20.png" />
+</p>
 
 The results of the genetic algorithm after being converted into routes, distances, vehicle allocations, travel times, total outlets visited, distribution times, and cumulative distances 
 
@@ -189,12 +197,12 @@ genetic_algorithm_solution <- genetic_algorithm_solution(genetic_algorithm_rou
 genetic_algorithm_explain <- genetic_algorithm_solution[c(1,3,4,5,6,7,8,9)]
 genetic_algorithm_explain
 ```
+## R Program-Geographic Information System (GIS) Code for Proposed Route
+
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/108170799-2f8a6c80-712d-11eb-9165-cce4f5ca6f20.png" />
+  <img src="https://user-images.githubusercontent.com/78789134/107481887-7ae2cf00-6bb1-11eb-9b8a-3694cfbc7ac7.png" />
 </p>
 
-
-## R Program-Geographic Information System (GIS) Code for Proposed Route
 ```
 # GEOGRAPHIC INFORMATION SYSTEM (GIS) FOR PROPOSED ROUTE
 route1 <- select (int_route,-c(initial_driver,Latitude.km,Longitude.km))
@@ -249,15 +257,6 @@ gis <- girafe_options(gis, opts_zoom(min =.3 , max=10))
 if (interactive()) print(gis)
 
 ```
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/107481887-7ae2cf00-6bb1-11eb-9b8a-3694cfbc7ac7.png" />
-</p>
-
-## R Program – Convert Output to Excel
-
-## Output
-
-
 
 ## Additional Features
 
