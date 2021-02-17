@@ -24,7 +24,36 @@ Planning the distribution process is important because with planning, companies 
 
 It is necessary to design a more optimal distribution route by considering the shortest distance, maximum capacity of the vehicle, and the working hours of the driver to  minimize the total distribution time and save the company expenses. In addition, lateness in the delivery of products is feared to decrease customer satisfaction. With the design of distribution routes, it is expected that products can be distributed to customers more quickly and optimally.
 
-## R Program – Library & Setup
+
+## Genetic Algorithm Manual Calculation Progress 
+
+### Calculating Nearest Neighbor as Population Initialization
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/108173733-14216080-7131-11eb-9043-855f03514984.jpg" />
+</p>
+
+### Determing Chromosome & Population Initialization
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/108173740-1683ba80-7131-11eb-8d4d-e0cf8acf5f20.jpg" />
+</p>
+
+### Chromosome Selection
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/108173740-1683ba80-7131-11eb-8d4d-e0cf8acf5f20.jpg" />
+</p>
+
+
+### Chromosome Crossover 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/108173749-197eab00-7131-11eb-97c9-625d9e7a98fc.jpg" />
+</p>
+
+### Chromosome Mutation
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/108173756-1aafd800-7131-11eb-96dd-30d3888caf79.jpg" />
+</p>
+
+## Route Detemination Program - R Programming
 
 ### Library & Setup
 
