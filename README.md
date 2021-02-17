@@ -56,6 +56,9 @@ It is necessary to design a more optimal distribution route by considering the s
 ## Route Detemination Program - R Programming
 
 ### Library & Setup
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/108176956-32895b00-7135-11eb-9413-6585593d46d0.jpg" />
+</p>
 
 ```
 This is the following library that need to be run in R Console.
@@ -82,7 +85,7 @@ int_route <- as.data.frame(int_route)
 ### R Program – Convert to Latitude & Longitude In km based on ISO 6709:2008
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/108169715-a6266a80-712b-11eb-9947-0a00f6192667.png" />
+  <img src="https://user-images.githubusercontent.com/78789134/108176960-34531e80-7135-11eb-8030-a7703fe2aa7c.jpg" />
 </p>
 
 Convert Longitude and Latitude to Distance in Kilometres Using this code
@@ -119,7 +122,7 @@ int_route$Longitude.km <- Longitude.km
 ### R Program -Calculating Distance Matrix
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/108169887-e7b71580-712b-11eb-9654-261e8197cfcb.png" />
+  <img src="https://user-images.githubusercontent.com/78789134/108176964-35844b80-7135-11eb-8b75-c80f579da93a.jpg" />
 </p>
 
 ```
@@ -131,7 +134,7 @@ distance_matrix  <- dist(route[ , 2:3], upper = T, diag = T) %>% as
 
 ### R Program - Creating An Initial Population With The Nearest Neighbor Algorithm
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/108170064-2f3da180-712c-11eb-8ee8-f9bf7e80c01e.png" />
+  <img src="https://user-images.githubusercontent.com/78789134/108176971-36b57880-7135-11eb-83ba-6e425804c082.jpg" />
 </p>
 
 ```
@@ -149,6 +152,10 @@ NNA_suggestion_route <- matrix(ncol = (max(route$node)-1), nrow = 20)
 ```
 
 ### R Program – Calculating Genetic Algorithm
+<p align="center">
+  <img src="
+https://user-images.githubusercontent.com/78789134/108176978-37e6a580-7135-11eb-94bb-6acca186af4f.jpg" />
+</p>
 
 Algorithm development carried out is the development of the Nearest Neighbor algorithm as population initialization and genetic algorithms for data processing. With the theory of evolution and genetic theory, the application of the Genetic Algorithm will involve several operators: Evolution operators are involved a selection process in it, Genetic Operators is involved in crossover and mutation operators. To check the optimization results, a fitness function is needed, which signifies an overview of the results or solutions that have been coded. During walking, the parent must be used for reproduction, crossing over, and mutation to create offspring. If the Genetic Algorithm is designed correctly, the population will converge and an optimal solution will be obtained
 
@@ -202,20 +209,15 @@ plot(genetic_algorithm_route)
 ### R Program – Genetic Algorithm Result
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/108170322-9a877380-712c-11eb-9e53-525bb8dde7b3.png" />
+  <img src="https://user-images.githubusercontent.com/78789134/108176983-3917d280-7135-11eb-82cd-984073d530a9.jpg" />
 </p>
 
 The results of the genetic algorithm with the solution of  genes and the total distance in the form of a fitness function value, (-) in fitness function value minimize the function and the value is cumulative distance that has been calculated with genetic algorithm (-18.08)
 
-### Time Series Generation of Genetic Algorithm
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/108051899-0363e280-707e-11eb-91cc-32046f59a6c3.png" />
-</p>
-
 ## R Program – Convert Genetic Algoritm To Proposed Route Result
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/108170799-2f8a6c80-712d-11eb-9165-cce4f5ca6f20.png" />
+  <img src="https://user-images.githubusercontent.com/78789134/108176987-3a48ff80-7135-11eb-8ccc-2ced9a5f6412.jpg" />
 </p>
 
 The results of the genetic algorithm after being converted into routes, distances, vehicle allocations, travel times, total outlets visited, distribution times, and cumulative distances 
@@ -229,7 +231,7 @@ genetic_algorithm_explain
 ## R Program-Geographic Information System (GIS) Code for Proposed Route
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/107481887-7ae2cf00-6bb1-11eb-9b8a-3694cfbc7ac7.png" />
+  <img src="https://user-images.githubusercontent.com/78789134/108176993-3b7a2c80-7135-11eb-98b5-d1a7f7e6a881.jpg" />
 </p>
 
 ```
@@ -286,6 +288,9 @@ gis <- girafe_options(gis, opts_zoom(min =.3 , max=10))
 if (interactive()) print(gis)
 
 ```
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78789134/108177002-3cab5980-7135-11eb-9a25-6a5c094e2eec.jpg" />
+</p>
 
 ## Additional Features
 
@@ -324,7 +329,7 @@ if (interactive()) print(gis)
 To ensure that the program can run properly. Error Checker will be added to the script genetic_algortihm_fitness.R, the program will detect if there is a negative value or zero value from input parameters. The program will 'stop' if there is a negative value on the input demand, service time. For capacity, vehicle speed, fuel ratio, fuel price and working hour and loading time, the program will 'stop' if there is a negative or zero (0) value
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/107483108-293b4400-6bb3-11eb-99f8-2ef70cbad7ae.JPG" />
+  <img src="https://user-images.githubusercontent.com/78789134/108177006-3fa64a00-7135-11eb-8fda-afbc49f4de3e.jpg" />
 </p>
 
 ### Benchmark Result
