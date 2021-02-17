@@ -7,7 +7,7 @@
 ![alt text](https://user-images.githubusercontent.com/78789134/108180087-efc98200-7138-11eb-92df-dcaadf1aef37.jpg)
 
 ## Hello from Author
-Hi, this program is part of my final project on http://scholar.unand.ac.id/65572, to make this program requires a lot of time, effort and student money. This program is free for academic purposes, please contact me if you want to use program for commercial use.
+Hi, this program is part of my final project on http://scholar.unand.ac.id/65572, to make this program requires a lot of time, effort and my student money. This program is free for academic purposes, please contact me if you want to use program for commercial use.
 
 ## Preface 
 
@@ -114,7 +114,7 @@ seconds1       <- round(seconds_dummy1, digits=3 )
 degree.Longitude <- degree1
 minutes.Longitude <- minutes1
 seconds.Longitude <- seconds1 
-Convert to km
+# 4 | Convert to km
 Longitude.km <(degree.Longitude * 111.32) + (minutes.Longitude*1.86) + (seconds.Longitude * 0.03092)
 int_route$Latitude.km <- Latitude.km
 int_route$Longitude.km <- Longitude.km
@@ -233,7 +233,7 @@ genetic_algorithm_explain
 ## R Program-Geographic Information System (GIS) Code for Proposed Route
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/108176993-3b7a2c80-7135-11eb-98b5-d1a7f7e6a881.jpg" />
+  <img src="https://user-images.githubusercontent.com/78789134/108182609-c52cf880-713b-11eb-9176-c1e4ccd4bcb1.jpg" />
 </p>
 
 ```
