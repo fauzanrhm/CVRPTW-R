@@ -2,9 +2,11 @@
 
 ![alt text](https://img.shields.io/badge/Language-R-brightgreen) ![alt text](https://img.shields.io/badge/Author-Fauzan%20Rahman-blue)
 
-Program Overview 
+## Program Overview 
 
 ![alt text](https://user-images.githubusercontent.com/78789134/108180087-efc98200-7138-11eb-92df-dcaadf1aef37.jpg)
+
+Hi, this program is part of my final project on http://scholar.unand.ac.id/65572, to make this program requires a lot of time and effort, this program is free for academic education, please contact me if you want to use program for commercial.
 
 ## Preface 
 
@@ -35,7 +37,7 @@ It is necessary to design a more optimal distribution route by considering the s
 
 ### Chromosome Selection
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/108173740-1683ba80-7131-11eb-8d4d-e0cf8acf5f20.jpg" />
+  <img src="https://user-images.githubusercontent.com/78789134/108173743-17b4e780-7131-11eb-931d-9d6943fcd5c9.jpg" />
 </p>
 
 
