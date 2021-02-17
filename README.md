@@ -6,6 +6,9 @@
 
 ![alt text](https://user-images.githubusercontent.com/78789134/108180087-efc98200-7138-11eb-92df-dcaadf1aef37.jpg)
 
+## Hello from author
+Hi, this program is part of my final project on http://scholar.unand.ac.id/65572, to make this program requires a lot of time and effort. This program is free for academic purposes, please contact me if you want to use program for commercial.
+
 ## Preface 
 
 <p align="center">
@@ -341,5 +344,3 @@ Benchmarking program aims to determine how efficiently the program performs comp
 
 However, by using population initialization using the Nearest Neighbor Algorithm, 1000 iterations may be enough so that it only takes an average of 263.82 seconds to get the desired result. So, with this result, it is hoped that this program can be used to solve more significant problems and will not take much time to solve them.
 
-## Hello from author
-Hi, this program is part of my final project on http://scholar.unand.ac.id/65572, to make this program requires a lot of time, effort and money. This program is free for academic purposes, please contact me if you want to use program for commercial.
