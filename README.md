@@ -332,7 +332,7 @@ if (interactive()) print(gis)
 To ensure that the program can run properly. Error Checker will be added to the script genetic_algortihm_fitness.R, the program will detect if there is a negative value or zero value from input parameters. The program will 'stop' if there is a negative value on the input demand, service time. For capacity, vehicle speed, fuel ratio, fuel price and working hour and loading time, the program will 'stop' if there is a negative or zero (0) value
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78789134/108177006-3fa64a00-7135-11eb-8fda-afbc49f4de3e.jpg" />
+  <img src="https://user-images.githubusercontent.com/78789134/108182558-b8100980-713b-11eb-844d-43425a96f0cf.jpg" />
 </p>
 
 ### Benchmark Result
